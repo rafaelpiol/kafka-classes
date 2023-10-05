@@ -17,7 +17,7 @@ public class NewOrderMain {
 					var order = new Order(userId, orderId, amount);
 					orderDispatcher.send("ECOMMERCE_NEW_ORDER", userId, order);
 
-					var email = "Thanks! We are processing your order!";
+					String email = "Thanks! We are processing your order!";
 					emailDispatcher.send("ECOMMERCE_SEND_EMAIL", userId, email);
 				}
 			}
